@@ -7,7 +7,7 @@ LABEL version="$SUBSONIC_VERSION"
 LABEL description="Subsonic media streamer"
 
 RUN     apt-get update &&\
-        apt-get -y install libav-tools lame &&\
+        apt-get -y install libav-tools lame flac faad vorbis-tools ffmpeg &&\
         mkdir -p /opt/data/transcode /opt/music/ /opt/playlist/ /opt/podcast/ &&\
         ln -s /usr/bin/lame /opt/data/transcode/lame &&\
         ln -s /usr/bin/avconv /opt/data/transcode/ffmpeg &&\
